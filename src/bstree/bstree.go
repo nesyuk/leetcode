@@ -8,6 +8,14 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+func FindMax(node *TreeNode) *TreeNode {
+	n := node
+	for n.Right != nil {
+		n = n.Right
+	}
+	return n
+}
+
 func Print(node *TreeNode) {
 	if node == nil {
 		return
