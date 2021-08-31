@@ -5,7 +5,7 @@ import (
 	"bstree"
 )
 
-func inorderTraversal(root *bstree.TreeNode) []int {
+func inorderTraversalStack(root *bstree.TreeNode) []int {
 	result := []int{}
 	if root == nil {
 		return result
@@ -31,10 +31,10 @@ func inorderTraversal(root *bstree.TreeNode) []int {
 func run() {
 	fmt.Println("go!")
 	bs := bstree.NewTree([]int{2, 1, 3})
-	fmt.Println(inorderTraversal(bs))
+	fmt.Println(inorderTraversalStack(bs))
 
 	bs = bstree.NewTree([]int{5, 6, 3, 1, 5, 7, 8, 9, 2})
-	fmt.Println(inorderTraversal(bs))
+	fmt.Println(inorderTraversalStack(bs))
 
 }
 
