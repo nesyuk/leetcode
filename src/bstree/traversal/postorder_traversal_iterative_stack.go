@@ -34,10 +34,10 @@ func postorderTraversalStack(root *bstree.TreeNode) []int {
 
 func run() {
 	fmt.Println("go!")
-	bs := bstree.NewTree([]int{1, 2, 3, 5})
+	bs := bstree.NewBSTree([]int{1, 2, 3, 5})
 	fmt.Println(postorderTraversalStack(bs))
 
-	bs = bstree.NewTree([]int{5, 6, 3, 1, 5, 7, 8, 9, 2})
+	bs = bstree.NewBSTree([]int{5, 6, 3, 1, 5, 7, 8, 9, 2})
 	fmt.Println(postorderTraversalStack(bs))
 }
 

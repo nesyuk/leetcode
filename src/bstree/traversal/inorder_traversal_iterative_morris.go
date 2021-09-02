@@ -36,13 +36,13 @@ func inorderTraversalMorris(root *bstree.TreeNode) []int {
 
 func run() {
 	fmt.Println("go!")
-	bs := bstree.NewTree([]int{2, 1, 3})
+	bs := bstree.NewBSTree([]int{2, 1, 3})
 	fmt.Println(inorderTraversalMorris(bs))
 
-	bs = bstree.NewTree([]int{5, 6, 3, 1, 5, 7, 8, 9, 2})
+	bs = bstree.NewBSTree([]int{5, 6, 3, 1, 5, 7, 8, 9, 2})
 	fmt.Println(inorderTraversalMorris(bs))
 
-	bs = bstree.NewTree([]int{1, 3, 2})
+	bs = bstree.NewBSTree([]int{1, 3, 2})
 	fmt.Println(inorderTraversalMorris(bs))
 }
 

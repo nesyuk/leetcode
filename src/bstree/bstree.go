@@ -37,7 +37,24 @@ func Print(node *TreeNode) {
 	Print(node.Right)	
 }
 
-func NewTree(array []int) *TreeNode {
+func NewTree(array []*int) *TreeNode {
+	return buildTree(0, array)		
+}
+
+func buildTree(idx int, array []*int) *TreeNode {
+	val := array[idx]
+	if val == nil {
+		return nil
+	}
+	node := TreeNode{}
+	node.Val = *val
+	node.Left = buildTree(idx*2 + 1, array)
+	node.Right = buildTree(idx*2 + 2, array)
+
+	return &node
+}
+
+func NewBSTree(array []int) *TreeNode {
 	var root *TreeNode
 	for _, val := range array {
 		root = addNode(root, val)
@@ -60,3 +77,4 @@ func addNode(node *TreeNode, val int) *TreeNode {
 func (t TreeNode) String() string {
 	return fmt.Sprintf("%d\n", t.Val)
 }
+
