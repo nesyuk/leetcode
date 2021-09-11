@@ -74,6 +74,19 @@ func addNode(node *TreeNode, val int) *TreeNode {
 	return node
 }
 
+func (t *TreeNode) Find(v int) *TreeNode {
+	if t == nil {
+		return nil
+	}
+	if t.Val > v {
+		return t.Left.Find(v)
+	}
+	if t.Val < v {
+		return t.Right.Find(v)
+	}
+	return t
+}
+
 func (t TreeNode) String() string {
 	return fmt.Sprintf("%d\n", t.Val)
 }
