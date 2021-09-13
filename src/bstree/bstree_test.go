@@ -17,6 +17,12 @@ func TestNewTree(t *testing.T) {
 	verify(t, InorderSuccessor(root, root.Find(1)).Val, 2)
 }
 
+func TestLowestCommonAncestor(t *testing.T) {
+	root := NewBSTree([]int{6, 2, 8, 0, 4, 7, 9, 3, 5})
+	verify(t, root.LowestCommonAncestor(root.Find(2), root.Find(4)).Val, 2 )
+	verify(t, root.LowestCommonAncestor(root.Find(2), root.Find(8)).Val, 6 )
+}
+
 func verify(t *testing.T, got int, expected int) {
 	if expected != got {
 		t.Fatalf("expected: %v, got: %v", expected, got)

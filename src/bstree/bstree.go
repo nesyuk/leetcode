@@ -91,3 +91,12 @@ func (t TreeNode) String() string {
 	return fmt.Sprintf("%d\n", t.Val)
 }
 
+func (t TreeNode) LowestCommonAncestor(p, q *TreeNode) *TreeNode {
+    if t.Val <= p.Val && t.Val >= q.Val || t.Val >= p.Val && t.Val <= q.Val {
+        return &t
+    }
+    if t.Val < p.Val {
+        return t.Right.LowestCommonAncestor(p, q)
+    }
+    return t.Left.LowestCommonAncestor(p, q)
+}
