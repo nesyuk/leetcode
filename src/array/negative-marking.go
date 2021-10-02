@@ -1,3 +1,4 @@
+package array
 
 // all n in nums are in [1...n]
 func findDuplicate(nums []int) int {
