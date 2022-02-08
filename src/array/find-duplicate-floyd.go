@@ -2,7 +2,7 @@ package array
 
 // 287. Find the Duplicate Number
 
-func findDuplicate(nums []int) int {
+func findDuplicate2(nums []int) int {
     slow, fast := nums[0], nums[nums[0]]
     
     for slow != fast {
